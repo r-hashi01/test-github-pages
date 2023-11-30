@@ -1,0 +1,15 @@
+version: '3'
+services:
+  jekyll-test:
+    image: jekyll/jekyll:latest
+    platform: linux/amd64
+    volumes:
+      - ./docs:/srv/jekyll
+    working_dir: /srv/jekyll
+    ports:
+      - "4000:4000"
+    command: sh -c "
+        bundle install &&
+        gem install webrick &&
+        jekyll serve --trace
+      "
