@@ -34,3 +34,4 @@ jobs:
             git config --global user.email '${{github.actor}}@users.noreply.github.com'
             git commit -m "deploy ${{github.sha}}"
             git push origin gh-pages
+            
