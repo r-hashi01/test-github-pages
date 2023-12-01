@@ -25,6 +25,7 @@ jobs:
             git rm -r --ignore-unmatch *
             rm -f .gitignore
             rm -rf .github
+            ls -la ../docs
             cp -R ../docs/_pages/* .
             cp -R ../docs/*.md .
             touch .nojekyll
